@@ -1,0 +1,224 @@
+:root {
+  --cyan: hsl(176, 50%, 47%);
+  --dark-cyan: hsl(176, 72%, 28%);
+  --light-black: rgba(0, 0, 0, 0.527);
+  --black: rgb(0, 0, 0);
+  --dark-gray: hsl(0, 0%, 48%);
+  --white: #fff;
+  --gray: #f0f0f0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  font-family: "Commissioner", sans-serif;
+  font-weight: 400;
+}
+body {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: var(--gray);
+  background-image: url("../images/image-hero-desktop.jpg");
+  background-size: 100% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+body > main {
+  width: 900px;
+  margin-inline: auto;
+  padding-top: 20px;
+}
+.btn {
+  width: 200px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: var(--cyan);
+  font-weight: 600;
+  color: var(--gray);
+  &:hover {
+    cursor: pointer;
+    transition: 0.5s;
+    background-color: var(--dark-cyan);
+  }
+}
+.btn.dark {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: var(--gray);
+  color: var(--black);
+  width: 160px;
+  &:hover {
+    transition: 0.5s;
+    opacity: 0.8;
+  }
+  img {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+  }
+}
+.card {
+  border-radius: 10px;
+  border: 2px solid var(--gray);
+  padding: 15px 20px;
+  margin-top: 20px;
+  transition: 0.5s;
+  header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    p:first-child {
+      font-weight: 700;
+      color: var(--black);
+    }
+    p:last-child {
+      color: var(--cyan);
+      font-weight: 500;
+    }
+  }
+  > p {
+    color: var(--dark-gray);
+    margin-bottom: 20px;
+  }
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p {
+      font-size: 2rem;
+      font-weight: 700;
+      position: relative;
+      &::after {
+        content: "left";
+        position: absolute;
+        right: -10px;
+        bottom: 25%;
+        color: var(--dark-gray);
+        font-size: 14px;
+        transform: translateX(100%);
+        font-weight: 400;
+      }
+    }
+  }
+}
+.off {
+  opacity: 0.5;
+}
+body > main > header {
+  display: flex;
+  align-items: center;
+  ul {
+    margin-left: auto;
+    display: flex;
+    li {
+      margin-left: 20px;
+      list-style-type: none;
+      a {
+        text-decoration: none;
+        color: var(--white);
+      }
+    }
+  }
+  button {
+    display: none;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    background-image: url("../images/icon-hamburger.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: auto;
+    cursor: pointer;
+  }
+}
+#main {
+  position: relative;
+  width: 700px;
+  margin: 200px auto 0;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-image: url("../images/logo-mastercraft.svg");
+    background-size: contain;
+  }
+  section {
+    width: 100%;
+    padding: 30px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: var(--white);
+  }
+  .introduction {
+    text-align: center;
+    h1 {
+      font-weight: 700;
+    }
+    p {
+      font-weight: 500;
+      color: var(--dark-gray);
+      margin-block: 15px;
+    }
+    div {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  .statistique-container {
+    .statistique {
+      display: flex;
+      height: 50px;
+      margin-bottom: 30px;
+      .info {
+        width: 30%;
+        padding-right: 20px;
+        margin-right: 20px;
+        border-right: 1px solid var(--gray);
+        p:first-child {
+          font-size: 2rem;
+          font-weight: 700;
+        }
+        p:last-child {
+          color: var(--dark-gray);
+        }
+      }
+      .info:last-of-type {
+        border: none;
+        padding: none;
+        margin: none;
+      }
+    }
+    .progress {
+      width: 100%;
+      height: 10px;
+      border-radius: 10px;
+      background-color: var(--gray);
+      div {
+        background-color: var(--cyan);
+        width: 80%;
+        height: 100%;
+        border-radius: inherit;
+      }
+    }
+  }
+  .card-container {
+    > p:first-child {
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 30px;
+    }
+    > p:not(:first-child) {
+      color: var(--dark-gray);
+      margin-bottom: 20px;
+    }
+  }
+}

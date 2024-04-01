@@ -1,0 +1,123 @@
+body.active {
+  overflow: hidden;
+}
+.hide {
+  display: none !important;
+}
+body > main > section {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+
+  main {
+    width: 630px;
+    height: 550px;
+    background-color: var(--white);
+    margin: 40px auto 0;
+    padding: 15px;
+    border-radius: 10px;
+    overflow-y: auto;
+    .title {
+      font-weight: 700;
+      color: var(--black);
+    }
+    .des {
+      font-size: 14px;
+      color: var(--dark-gray);
+      margin-block: 10px;
+    }
+    .page-card {
+      margin-top: 10px;
+      border-radius: 10px;
+      &.active {
+        border: 2px solid var(--cyan);
+        .price-count {
+          display: flex;
+        }
+      }
+      &.desibled,
+      &.desibled * {
+        pointer-events: none;
+      }
+      .card {
+        margin: 0;
+        border-radius: inherit;
+        display: flex;
+        border-radius: 10px 10px 0px 0px;
+        input {
+          margin: 0 10px auto 0;
+        }
+      }
+      .price-count {
+        display: none;
+        align-items: center;
+        height: 60px;
+        padding-inline: 10px;
+        p {
+          color: var(--dark-gray);
+        }
+        .input {
+          margin-inline: auto 10px;
+          width: 100px;
+          height: 40px;
+          border-radius: 20px;
+          border: 2.5px solid var(--gray);
+          display: flex;
+          align-items: center;
+          padding-left: 10px;
+          input {
+            width: 80%;
+            font-weight: 700;
+          }
+          label {
+            margin-right: 10px;
+            color: var(--gray);
+            font-weight: 700;
+          }
+        }
+        .btn {
+          width: 100px;
+        }
+      }
+    }
+  }
+  .completed {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 350px;
+    height: 350px;
+    border-radius: 10px;
+    background-color: var(--white);
+    img {
+      margin-block: 20px;
+    }
+    p:first-of-type {
+      font-weight: 700;
+      font-size: 20px;
+    }
+    p:last-of-type {
+      color: var(--dark-gray);
+      margin-block: 20px;
+    }
+    button {
+      width: 100px;
+    }
+  }
+}
+@media screen and (max-width: 642px) {
+  body > main > section {
+    > main {
+      width: 90%;
+    }
+  }
+}

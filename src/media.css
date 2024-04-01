@@ -1,0 +1,106 @@
+@media screen and (max-width: 900px) {
+  body > main {
+    width: 100%;
+  }
+  body > main > header {
+    padding-inline: 40px;
+  }
+}
+@media screen and (max-width: 760px) {
+  .card {
+    header {
+      display: block;
+    }
+    footer {
+      display: block;
+      p {
+        width: max-content;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  body > main > header {
+    z-index: 10;
+    padding-inline: 20px;
+    button {
+      display: block;
+    }
+    ul {
+      z-index: 2;
+      transition: 0.4s;
+      border-radius: 10px;
+      position: absolute;
+      top: 80px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: block;
+      width: 250px;
+      height: 0;
+      overflow: hidden;
+      background-color: var(--white);
+      li {
+        margin-left: 0;
+        padding-left: 10px;
+        border-bottom: 2px solid var(--gray);
+        padding-block: 20px;
+        a {
+          color: var(--black);
+          font-weight: 500;
+        }
+      }
+      li:last-of-type {
+        border: none;
+      }
+    }
+  }
+  body > main > header.clicked {
+    button {
+      background-image: url("../images/icon-close-menu.svg");
+    }
+    ul {
+      height: 185px;
+    }
+  }
+}
+@media screen and (max-width: 720px) {
+  body {
+    background-image: url("../images/image-hero-mobile.jpg");
+    background-size: 100% 30%;
+  }
+  .btn.dark {
+    width: max-content;
+    span {
+      display: none;
+    }
+    img {
+      margin: 0;
+    }
+  }
+  #main {
+    width: 330px;
+    margin-top: 100px;
+    section:nth-child(2) {
+      height: max-content;
+      .statistique {
+        height: max-content;
+        flex-direction: column;
+        align-items: center;
+        .info {
+          text-align: center;
+          width: max-content;
+          margin: 0 0 10px;
+          padding: 0;
+          border: none;
+          p:last-child {
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--gray);
+          }
+        }
+        .info:last-child p:last-child {
+          border: none;
+          padding: 0;
+        }
+      }
+    }
+  }
+}
